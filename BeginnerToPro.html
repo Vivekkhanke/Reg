@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BeginnerToPro+ Online Classes – Register</title>
+<meta name="description" content="Register for BeginnerToPro+ online IT classes in Python, Java and SQL.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ffc107'/%3E%3Cpath d='M14 46h12V36h12V26h12' fill='none' stroke='%23111' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --brand:#fbbf24; --brand-2:#fde68a; --brand-dark:#f59e0b;
+    --ink:#f8fafc; --ink-2:#e2e8f0; --muted:#94a3b8;
+    --bg:#070b12; --bg-2:#101827; --card:rgba(15,23,42,.78); --field:#101a2a; --line:rgba(148,163,184,.18); --ok:#34d399; --err:#f87171;
+    --radius:18px; --ease:cubic-bezier(.22,.61,.36,1); --shadow:0 28px 90px rgba(2,6,23,.72);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;color-scheme:dark}
+  body{
+    margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:
+      radial-gradient(circle at top right, rgba(251,191,36,.24), transparent 26%),
+      radial-gradient(circle at bottom left, rgba(96,165,250,.14), transparent 25%),
+      linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+    line-height:1.55;min-height:100vh;
+    -webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden;
+  }
+  body::before,body::after{
+    content:"";position:fixed;z-index:-1;border-radius:50%;filter:blur(90px);pointer-events:none
+  }
+  body::before{width:440px;height:440px;background:rgba(251,191,36,.18);top:-160px;right:-140px}
+  body::after{width:380px;height:380px;background:rgba(59,130,246,.12);bottom:-140px;left:-140px}
+
+  .wrap{max-width:700px;margin:0 auto;padding:28px 16px 56px}
+
+  header{text-align:center;padding:18px 8px 0;animation:rise .7s var(--ease) both}
+  .logo{display:inline-flex;align-items:center;gap:14px;text-align:left;text-decoration:none;color:inherit}
+  .logo svg{width:58px;height:58px;flex:none;filter:drop-shadow(0 10px 22px rgba(251,191,36,.34));transition:transform .4s var(--ease)}
+  .logo:hover svg{transform:rotate(-4deg) scale(1.06)}
+  .wordmark{display:flex;flex-direction:column;line-height:1.05}
+  .wordmark b{font-size:1.8rem;font-weight:800;letter-spacing:-.04em;color:#fff}
+  .wordmark b i{
+    font-style:normal;background:linear-gradient(135deg,var(--brand-2),var(--brand-dark));
+    -webkit-background-clip:text;background-clip:text;color:transparent
+  }
+  .wordmark small{font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brand);margin-top:6px}
+  .tagline{margin:16px 0 0;color:var(--ink-2);font-size:1.04rem}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0 0}
+  .pill{
+    display:inline-flex;align-items:center;gap:6px;background:rgba(251,191,36,.08);
+    border:1px solid rgba(251,191,36,.32);color:var(--brand-2);padding:7px 13px;border-radius:999px;
+    font-size:.82rem;font-weight:600;transition:transform .2s var(--ease), box-shadow .2s, background .2s, border-color .2s
+  }
+  .pill:hover{transform:translateY(-2px);background:rgba(251,191,36,.13);border-color:rgba(251,191,36,.5);box-shadow:0 8px 18px rgba(251,191,36,.12)}
+  .pill svg{width:15px;height:15px}
+
+  .card{
+    background:linear-gradient(180deg, rgba(15,23,42,.96), rgba(15,23,42,.82));border-radius:24px;padding:30px 24px;margin-top:26px;
+    border:1px solid var(--line);position:relative;overflow:hidden;backdrop-filter:blur(10px);
+    box-shadow:var(--shadow);
+    animation:rise .8s .12s var(--ease) both;
+  }
+  .card::before{
+    content:"";position:absolute;inset:0 0 auto 0;height:5px;
+    background:linear-gradient(90deg,var(--brand-2),var(--brand),var(--brand-dark))
+  }
+  h2{margin:4px 0 4px;font-size:1.35rem;letter-spacing:-.02em;color:#fff}
+  .sub{margin:0 0 26px;color:var(--muted);font-size:.93rem}
+
+  .field{margin-bottom:22px}
+  label.lbl,legend{display:block;font-weight:600;margin-bottom:8px;font-size:.92rem;padding:0;color:var(--ink-2)}
+  .req{color:var(--brand)}
+  input[type=text],input[type=email],input[type=tel]{
+    width:100%;font:inherit;font-size:1rem;padding:14px 15px;border:1.5px solid var(--line);border-radius:12px;
+    background:var(--field);color:#fff;
+    transition:border-color .2s var(--ease), box-shadow .2s var(--ease), background .2s;
+  }
+  input::placeholder{color:#6b7280}
+  input:hover{border-color:#444}
+  input:focus{outline:none;border-color:var(--brand);background:#202020;box-shadow:0 0 0 4px rgba(255,193,7,.18)}
+  input:-webkit-autofill{-webkit-text-fill-color:#fff;-webkit-box-shadow:0 0 0 40px #1c1c1c inset}
+  fieldset{border:0;padding:0;margin:0 0 22px;min-width:0}
+
+  .options{display:grid;gap:10px}
+  .options.two{grid-template-columns:1fr 1fr}
+  @media (max-width:420px){.options.two{grid-template-columns:1fr}.card{padding:26px 18px}}
+  .opt{position:relative;display:block}
+  .opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer;z-index:1}
+  .opt span{
+    display:flex;align-items:center;gap:12px;padding:14px 15px;border:1.5px solid var(--line);
+    border-radius:12px;font-weight:500;background:var(--field);color:var(--ink);
+    transition:border-color .2s var(--ease), background .2s, transform .15s var(--ease), box-shadow .2s, color .2s;
+  }
+  .opt:hover span{border-color:rgba(255,193,7,.6);transform:translateY(-1px)}
+  .opt span::before{
+    content:"";width:22px;height:22px;flex:none;border:2px solid #555;background:#111;
+    transition:all .2s var(--ease);
+  }
+  .opt.radio span::before{border-radius:50%}
+  .opt.check span::before{border-radius:7px}
+  .opt input:checked + span{border-color:var(--brand);background:rgba(255,193,7,.1);color:var(--brand-2);box-shadow:0 4px 18px rgba(255,193,7,.12)}
+  .opt.radio input:checked + span::before{border-color:var(--brand);background:radial-gradient(var(--brand) 42%,#111 46%)}
+  .opt.check input:checked + span::before{
+    border-color:var(--brand);background:var(--brand) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3.2L15 6.8' fill='none' stroke='%23111' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat
+  }
+  .opt input:focus-visible + span{box-shadow:0 0 0 4px rgba(255,193,7,.25)}
+  .opt small{margin-left:auto;color:var(--muted);font-weight:600;font-size:.85rem}
+  .opt input:checked + span small{color:var(--brand)}
+
+  .total{
+    display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding:12px 15px;
+    border-radius:12px;background:rgba(255,193,7,.08);border:1px dashed rgba(255,193,7,.5);color:var(--brand-2);font-weight:600;
+    font-size:.92rem;max-height:0;opacity:0;overflow:hidden;padding-top:0;padding-bottom:0;margin-top:0;border-width:0;
+    transition:all .3s var(--ease);
+  }
+  .total.show{max-height:60px;opacity:1;padding-top:12px;padding-bottom:12px;margin-top:12px;border-width:1px}
+
+  .err{color:var(--err);font-size:.84rem;margin-top:7px;max-height:0;opacity:0;overflow:hidden;transition:all .25s var(--ease)}
+  .invalid .err{max-height:40px;opacity:1}
+  .invalid input[type=text],.invalid input[type=email],.invalid input[type=tel]{border-color:var(--err);background:#201414}
+  .invalid .opt span{border-color:rgba(248,113,113,.5)}
+  .shake{animation:shake .4s}
+
+  button.submit{
+    position:relative;width:100%;font:inherit;font-weight:800;font-size:1.05rem;padding:16px;border:0;border-radius:14px;
+    color:#111;background:linear-gradient(135deg,var(--brand-2),var(--brand) 50%,var(--brand-dark));cursor:pointer;
+    box-shadow:0 12px 28px -8px rgba(255,193,7,.55);overflow:hidden;
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    transition:transform .2s var(--ease), box-shadow .2s var(--ease), opacity .2s;
+  }
+  button.submit::after{
+    content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;
+    background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);
+    transition:left .6s var(--ease);
+  }
+  button.submit:hover::after{left:130%}
+  button.submit:hover{transform:translateY(-2px);box-shadow:0 16px 34px -8px rgba(255,193,7,.7)}
+  button.submit:active{transform:translateY(0) scale(.99)}
+  button.submit:focus-visible{outline:3px solid rgba(255,225,77,.6);outline-offset:3px}
+  button.submit:disabled{opacity:.8;cursor:not-allowed;transform:none}
+  button.submit svg{width:20px;height:20px;transition:transform .2s var(--ease)}
+  button.submit:hover:not(:disabled) svg{transform:translateX(4px)}
+  .spinner{width:20px;height:20px;border:3px solid rgba(0,0,0,.25);border-top-color:#111;border-radius:50%;animation:spin .7s linear infinite;display:none}
+  button.loading .spinner{display:block}
+  button.loading .arrow{display:none}
+
+  .secure{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:14px;color:var(--muted);font-size:.8rem}
+  .secure svg{width:14px;height:14px}
+
+  .banner{
+    display:flex;gap:12px;align-items:flex-start;margin-top:18px;padding:15px 16px;border-radius:12px;font-size:.95rem;
+    max-height:0;opacity:0;overflow:hidden;padding-top:0;padding-bottom:0;margin-top:0;border:0 solid transparent;
+    transition:all .35s var(--ease);
+  }
+  .banner.show{max-height:240px;opacity:1;padding-top:15px;padding-bottom:15px;margin-top:18px;border-width:1px}
+  .banner.ok{background:rgba(74,222,128,.08);border-color:rgba(74,222,128,.4);color:#86efac}
+  .banner.bad{background:rgba(248,113,113,.08);border-color:rgba(248,113,113,.4);color:#fca5a5}
+  .banner .ico{flex:none;width:26px;height:26px}
+  .banner.ok .ico circle{stroke-dasharray:80;stroke-dashoffset:80;animation:draw .6s .1s var(--ease) forwards}
+  .banner.ok .ico path{stroke-dasharray:24;stroke-dashoffset:24;animation:draw .4s .5s var(--ease) forwards}
+
+  footer{text-align:center;color:var(--muted);font-size:.86rem;margin-top:28px;animation:rise .8s .25s var(--ease) both}
+  footer a{color:var(--brand);text-decoration:none;font-weight:600}
+  footer a:hover{text-decoration:underline}
+  footer .dot{margin:0 8px;opacity:.5}
+
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;transition-duration:.001ms!important}
+    html{scroll-behavior:auto}
+  }
+
+  /* ===== Effects ===== */
+  .bg-fx{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+  .bg-fx span{
+    position:absolute;bottom:-60px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-weight:700;color:var(--brand);opacity:0;white-space:nowrap;
+    animation:floatUp linear infinite;
+  }
+  @keyframes floatUp{
+    0%{transform:translateY(0) rotate(0);opacity:0}
+    10%{opacity:.14}
+    90%{opacity:.14}
+    100%{transform:translateY(-115vh) rotate(18deg);opacity:0}
+  }
+  .logo svg{animation:bob 4s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+  .logo:hover svg{animation:none}
+
+  .typer{margin:6px 0 0;font-size:1.05rem;font-weight:700;color:#fff;min-height:1.6em}
+  .typer #typed{background:linear-gradient(135deg,var(--brand-2),var(--brand-dark));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .caret{display:inline-block;width:2px;height:1.05em;background:var(--brand);margin-left:3px;vertical-align:-.15em;animation:blink 1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+
+  .pill-link{text-decoration:none;background:rgba(255,193,7,.18);border-color:var(--brand);color:var(--brand-2)}
+  .pill-link:hover{background:var(--brand);color:#111}
+
+  /* animated top bar + breathing glow + cursor spotlight on the card */
+  .card::before{background-size:220% 100%;animation:barSlide 5s linear infinite}
+  @keyframes barSlide{to{background-position:-220% 0}}
+  .card{animation:rise .8s .12s var(--ease) both, glow 5s 1s ease-in-out infinite}
+  @keyframes glow{
+    0%,100%{box-shadow:0 1px 2px rgba(0,0,0,.4),0 24px 50px -16px rgba(0,0,0,.8),0 0 0 1px rgba(255,193,7,.06)}
+    50%{box-shadow:0 1px 2px rgba(0,0,0,.4),0 24px 60px -14px rgba(255,193,7,.22),0 0 0 1px rgba(255,193,7,.28)}
+  }
+  .card::after{
+    content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;
+    background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(255,193,7,.10),transparent 60%)
+  }
+  .card:hover::after{opacity:1}
+  .card form{position:relative;z-index:1}
+
+  /* staggered field entrance */
+  form > *{animation:rise .6s var(--ease) both}
+  form > *:nth-child(1){animation-delay:.25s}
+  form > *:nth-child(2){animation-delay:.32s}
+  form > *:nth-child(3){animation-delay:.39s}
+  form > *:nth-child(4){animation-delay:.46s}
+  form > *:nth-child(5){animation-delay:.53s}
+  form > *:nth-child(6){animation-delay:.60s}
+
+  /* gentle attention pulse on the button while idle */
+  button.submit:not(:disabled):not(:hover){animation:rise .6s .6s var(--ease) both, pulse 2.6s 1.5s ease-in-out infinite}
+  @keyframes pulse{
+    0%,100%{box-shadow:0 12px 28px -8px rgba(255,193,7,.55),0 0 0 0 rgba(255,193,7,.35)}
+    50%{box-shadow:0 12px 28px -8px rgba(255,193,7,.55),0 0 0 10px rgba(255,193,7,0)}
+  }
+
+  /* website call-to-action */
+  .web-cta{
+    display:flex;align-items:center;gap:14px;margin-top:18px;padding:16px 18px;border-radius:16px;
+    background:linear-gradient(135deg,rgba(255,193,7,.14),rgba(255,193,7,.04));
+    border:1px solid rgba(255,193,7,.4);color:var(--ink);text-decoration:none;
+    transition:transform .25s var(--ease), box-shadow .25s, border-color .25s;
+    animation:rise .8s .3s var(--ease) both;
+  }
+  .web-cta:hover{transform:translateY(-3px);border-color:var(--brand);box-shadow:0 14px 30px -12px rgba(255,193,7,.45)}
+  .web-cta .globe{flex:none;width:44px;height:44px;border-radius:12px;background:var(--brand);color:#111;display:grid;place-items:center}
+  .web-cta .globe svg{width:24px;height:24px;transition:transform .6s var(--ease)}
+  .web-cta:hover .globe svg{transform:rotate(360deg)}
+  .web-cta .txt{display:flex;flex-direction:column;line-height:1.3;min-width:0}
+  .web-cta .txt small{color:var(--muted);font-size:.8rem}
+  .web-cta .txt b{color:var(--brand-2);font-size:1.05rem;letter-spacing:-.01em;overflow-wrap:anywhere}
+  .web-cta .go{margin-left:auto;width:22px;height:22px;color:var(--brand);flex:none;transition:transform .25s var(--ease)}
+  .web-cta:hover .go{transform:translateX(5px)}
+
+  button.submit.shake.shake{animation:shake .4s}
+  #confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+</style>
+</head>
+<body>
+<div class="bg-fx" id="bgfx" aria-hidden="true"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+<div class="wrap">
+  <header>
+    <a class="logo" href="#" aria-label="BeginnerToPro+ home">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffe566"/><stop offset=".5" stop-color="#ffc107"/><stop offset="1" stop-color="#f59e0b"/>
+          </linearGradient>
+        </defs>
+        <rect width="64" height="64" rx="16" fill="url(#lg)"/>
+        <rect x=".75" y=".75" width="62.5" height="62.5" rx="15.3" fill="none" stroke="#000" stroke-opacity=".18" stroke-width="1.5"/>
+        <!-- ascending steps: beginner to pro -->
+        <path d="M12 47h11V37h11V27h11" fill="none" stroke="#111" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- plus badge -->
+        <circle cx="47" cy="17" r="9" fill="#111"/>
+        <path d="M47 12.5v9M42.5 17h9" stroke="#ffc107" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span class="wordmark">
+        <b>BeginnerToPro<i>+</i></b>
+        <small>Online Classes</small>
+      </span>
+    </a>
+    <p class="tagline">Master SQL, Python & Java from scratch with real-world projects.</p>
+    <p class="typer" aria-label="Learn Python, Java and SQL">Learn <span id="typed"></span><span class="caret" aria-hidden="true"></span></p>
+    <div class="pills">
+      <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30–40 days</span>
+      <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12M6 9h12M9 4c5 0 5 9 0 9H6l8 7"/></svg>3,999 per batch</span>
+      <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg>Live on Google Meet</span>
+      <a class="pill pill-link" href="https://www.sqldb.online" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>www.sqldb.online</a>
+    </div>
+  </header>
+
+  <main class="card">
+    <h2>Reserve your seat</h2>
+    <p class="sub">Fill in your details and choose one or more batches. Fields marked <span class="req">*</span> are required.</p>
+
+    <form id="regForm" novalidate>
+      <div class="field" data-field="name">
+        <label class="lbl" for="name">Full Name <span class="req">*</span></label>
+        <input type="text" id="name" name="name" autocomplete="name" placeholder="Full Name" maxlength="100">
+        <div class="err">Please enter your full name.</div>
+      </div>
+
+      <div class="field" data-field="email">
+        <label class="lbl" for="email">Email ID <span class="req">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="120">
+        <div class="err">Please enter a valid email address.</div>
+      </div>
+
+      <div class="field" data-field="mobile">
+        <label class="lbl" for="mobile">Mobile Number <span class="req">*</span></label>
+        <input type="tel" id="mobile" name="mobile" autocomplete="tel" inputmode="tel" placeholder="10-digit mobile number" maxlength="16">
+        <div class="err">Please enter a valid 10-digit mobile number.</div>
+      </div>
+
+      <fieldset data-field="level">
+        <legend>Fresher or Experienced? <span class="req">*</span></legend>
+        <div class="options two">
+          <label class="opt radio"><input type="radio" name="level" value="Fresher"><span>Fresher</span></label>
+          <label class="opt radio"><input type="radio" name="level" value="Experienced"><span>Experienced</span></label>
+        </div>
+        <div class="err">Please choose one option.</div>
+      </fieldset>
+
+      <fieldset data-field="batch">
+        <legend>Select your batch(es) <span class="req">*</span></legend>
+        <div class="options">
+          <label class="opt check"><input type="checkbox" name="batch" value="Python"><span>Python <small>₹3,999</small></span></label>
+          <label class="opt check"><input type="checkbox" name="batch" value="JAVA"><span>Java <small>₹3,999</small></span></label>
+          <label class="opt check"><input type="checkbox" name="batch" value="SQL"><span>SQL <small>₹3,999</small></span></label>
+        </div>
+        <div class="total" id="total" aria-live="polite"></div>
+        <div class="err">Please select at least one batch.</div>
+      </fieldset>
+
+      <button type="submit" class="submit" id="submitBtn">
+        <span class="spinner" aria-hidden="true"></span>
+        <span class="label">Register Now</span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <div class="secure">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>
+        Your details are used only to contact you about your class.
+      </div>
+      <div id="banner" class="banner" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <a class="web-cta" href="https://www.sqldb.online" target="_blank" rel="noopener">
+    <span class="globe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></span>
+    <span class="txt"><small>Explore the full curriculum &amp; more</small><b>www.sqldb.online</b></span>
+    <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+
+  <footer>
+    <a href="mailto:beginnertoproplus@gmail.com">beginnertoproplus@gmail.com</a><span class="dot">•</span><a href="https://www.sqldb.online" target="_blank" rel="noopener">www.sqldb.online</a>
+    <div style="margin-top:8px">© <span id="yr"></span> BeginnerToPro+</div>
+  </footer>
+</div>
+
+<script>
+/* =====================================================================
+   GOOGLE FORM CONFIGURATION
+   FORM_ID comes from forms.gle/ju7fmGB22HaxNaL18. The ENTRY IDs were
+   taken from the form's pre-filled link. If you recreate the form or
+   rename an option, update these and the option values in the HTML.
+   ===================================================================== */
+const GOOGLE_FORM = {
+  FORM_ID: "1FAIpQLSfRQiqMODvi007KT9y_dva2BYc3AB12WyaTswdl-YHgpOnAOg",
+  ENTRY: {
+    name:   "entry.78378959",    // Full Name
+    email:  "entry.1776406514",  // Email id
+    mobile: "entry.1836327724",  // Mobile No.
+    level:  "entry.506662150",   // Fresher or Experienced?
+    batch:  "entry.199704594"    // Please select our batch? (checkboxes)
+  }
+};
+const PRICE_PER_BATCH = 3999;
+
+const ENDPOINT = `https://docs.google.com/forms/d/e/${GOOGLE_FORM.FORM_ID}/formResponse`;
+const form = document.getElementById("regForm");
+const btn = document.getElementById("submitBtn");
+const btnLabel = btn.querySelector(".label");
+const banner = document.getElementById("banner");
+const totalEl = document.getElementById("total");
+const configured = Object.values(GOOGLE_FORM.ENTRY).every(v => /^entry\.\d+$/.test(v));
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+const ICON_OK = '<svg class="ico" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="12.5"/><path d="M8.5 14.5l4 4 7-8"/></svg>';
+const ICON_BAD = '<svg class="ico" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="12.5"/><path d="M14 8v7M14 19v.5"/></svg>';
+
+function showBanner(type, msg){
+  banner.className = "banner " + type;
+  banner.innerHTML = (type === "ok" ? ICON_OK : ICON_BAD) + "<div></div>";
+  banner.lastChild.textContent = msg;       // textContent: safe with user-entered names
+  requestAnimationFrame(() => {
+    banner.classList.add("show");
+    banner.scrollIntoView({behavior:"smooth", block:"nearest"});
+  });
+}
+function hideBanner(){ banner.className = "banner"; }
+function setInvalid(field, bad){
+  form.querySelector(`[data-field="${field}"]`).classList.toggle("invalid", bad);
+}
+
+const EMAIL_RE  = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const MOBILE_RE = /^(?:\+?91|0)?[6-9]\d{9}$/;
+
+function read(){
+  return {
+    name:   form.name.value.trim(),
+    email:  form.email.value.trim(),
+    mobile: form.mobile.value.trim().replace(/[\s-]/g, ""),
+    level:  (form.querySelector('input[name="level"]:checked') || {}).value || "",
+    batch:  [...form.querySelectorAll('input[name="batch"]:checked')].map(i => i.value)
+  };
+}
+const RULES = {
+  name:   v => v.name.length >= 2,
+  email:  v => EMAIL_RE.test(v.email),
+  mobile: v => MOBILE_RE.test(v.mobile),
+  level:  v => !!v.level,
+  batch:  v => v.batch.length > 0
+};
+
+function validate(){
+  const v = read();
+  let firstBad = null;
+  Object.keys(RULES).forEach(k => {
+    const ok = RULES[k](v);
+    setInvalid(k, !ok);
+    if (!ok && !firstBad) firstBad = k;
+  });
+  if (firstBad){
+    const target = form.querySelector(`[data-field="${firstBad}"]`);
+    target.scrollIntoView({behavior:"smooth", block:"center"});
+    const f = target.querySelector("input");
+    if (f) f.focus({preventScroll:true});
+    btn.classList.remove("shake"); void btn.offsetWidth; btn.classList.add("shake");
+    return null;
+  }
+  return v;
+}
+
+// Validate a text field when the user leaves it (after they've typed something)
+["name","email","mobile"].forEach(k => {
+  form[k].addEventListener("blur", () => { if (form[k].value) setInvalid(k, !RULES[k](read())); });
+});
+// Clear an error as soon as the user edits that field
+form.addEventListener("input", e => {
+  const f = e.target.closest("[data-field]");
+  if (f) f.classList.remove("invalid");
+});
+// Live price total
+form.addEventListener("change", () => {
+  const n = form.querySelectorAll('input[name="batch"]:checked').length;
+  if (n){
+    totalEl.innerHTML = "<span></span><span></span>";
+    totalEl.children[0].textContent = n + (n === 1 ? " batch selected" : " batches selected");
+    totalEl.children[1].textContent = "Total ₹" + (n * PRICE_PER_BATCH).toLocaleString("en-IN");
+    totalEl.classList.add("show");
+  } else totalEl.classList.remove("show");
+});
+
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  hideBanner();
+
+  const data = validate();
+  if (!data){ showBanner("bad", "Please fix the highlighted fields and try again."); return; }
+  if (!configured){ showBanner("bad", "Setup incomplete: the Google Form entry IDs are missing in the code, so nothing was sent."); return; }
+
+  const E = GOOGLE_FORM.ENTRY;
+  const body = new URLSearchParams();
+  body.append(E.name, data.name);
+  body.append(E.email, data.email);
+  body.append(E.mobile, data.mobile);
+  body.append(E.level, data.level);
+  data.batch.forEach(b => body.append(E.batch, b));   // one key per selected batch
+  body.append("fvv", "1");
+  body.append("pageHistory", "0");
+
+  btn.disabled = true; btn.classList.add("loading"); btnLabel.textContent = "Submitting…";
+  try {
+    // Google Forms sends no CORS headers, so the response is opaque (no-cors).
+    await fetch(ENDPOINT, {
+      method: "POST", mode: "no-cors",
+      headers: {"Content-Type": "application/x-www-form-urlencoded"},
+      body: body.toString()
+    });
+    form.reset();
+    totalEl.classList.remove("show");
+    burst();
+    showBanner("ok", "Thank you, " + data.name.split(" ")[0] + "! Your registration has been received. We’ll contact you soon at " + data.email + ".");
+  } catch (err){
+    showBanner("bad", "Sorry, we couldn’t submit your registration. Please check your internet connection and try again, or email beginnertoproplus@gmail.com.");
+  } finally {
+    btn.disabled = false; btn.classList.remove("loading"); btnLabel.textContent = "Register Now";
+  }
+});
+
+/* ===== Effects ===== */
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// Floating code symbols in the background
+(function(){
+  if (reduceMotion) return;
+  const bg = document.getElementById("bgfx");
+  const words = ["{ }","</>","SELECT","def","public","JOIN","print()","[ ]","WHERE","class","=>","INT","for","*"];
+  const n = window.innerWidth < 600 ? 10 : 18;
+  for (let i = 0; i < n; i++){
+    const el = document.createElement("span");
+    el.textContent = words[i % words.length];
+    el.style.left = (Math.random() * 96) + "%";
+    el.style.fontSize = (12 + Math.random() * 16) + "px";
+    el.style.animationDuration = (16 + Math.random() * 18) + "s";
+    el.style.animationDelay = (-Math.random() * 30) + "s";
+    bg.appendChild(el);
+  }
+})();
+
+// Typewriter: Python / Java / SQL
+(function(){
+  const el = document.getElementById("typed");
+  const words = ["Python","Java","SQL"];
+  if (reduceMotion){ el.textContent = "Python · Java · SQL"; return; }
+  let w = 0, i = 0, del = false;
+  (function tick(){
+    const word = words[w];
+    el.textContent = word.slice(0, i);
+    let delay = del ? 55 : 110;
+    if (!del && i === word.length){ del = true; delay = 1300; }
+    else if (del && i === 0){ del = false; w = (w + 1) % words.length; delay = 350; }
+    else i += del ? -1 : 1;
+    setTimeout(tick, delay);
+  })();
+})();
+
+// Cursor spotlight on the card
+(function(){
+  const card = document.querySelector(".card");
+  card.addEventListener("pointermove", e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty("--mx", (e.clientX - r.left) + "px");
+    card.style.setProperty("--my", (e.clientY - r.top) + "px");
+  });
+})();
+
+// Confetti burst on successful submit
+const cv = document.getElementById("confetti");
+const cx = cv.getContext("2d");
+function burst(){
+  if (reduceMotion) return;
+  const dpr = window.devicePixelRatio || 1;
+  cv.width = innerWidth * dpr; cv.height = innerHeight * dpr;
+  cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  const colors = ["#ffc107","#ffe14d","#f59e0b","#ffffff","#fff3b0"];
+  const ox = innerWidth / 2, oy = innerHeight * 0.55;
+  const parts = Array.from({length: 140}, () => {
+    const a = Math.random() * Math.PI * 2, sp = 4 + Math.random() * 9;
+    return {x: ox, y: oy, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp - 6,
+            w: 6 + Math.random() * 6, h: 4 + Math.random() * 5, r: Math.random() * 6,
+            vr: (Math.random() - .5) * .4, c: colors[(Math.random() * colors.length) | 0], life: 0};
+  });
+  const start = performance.now();
+  (function frame(t){
+    const age = t - start;
+    cx.clearRect(0, 0, innerWidth, innerHeight);
+    parts.forEach(p => {
+      p.vy += .28; p.vx *= .99; p.x += p.vx; p.y += p.vy; p.r += p.vr;
+      cx.save(); cx.translate(p.x, p.y); cx.rotate(p.r);
+      cx.globalAlpha = Math.max(0, 1 - age / 3200);
+      cx.fillStyle = p.c; cx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h); cx.restore();
+    });
+    if (age < 3200) requestAnimationFrame(frame);
+    else cx.clearRect(0, 0, innerWidth, innerHeight);
+  })(start);
+}
+</script>
+</body>
+</html>
